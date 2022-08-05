@@ -349,6 +349,16 @@ h1 {
   line-height: 1.2em;
 }
 
+h2 {
+  font-size: 2.5rem;
+  letter-spacing: 0.1em;
+  line-height: 1.2em;
+  color: #2d3651;
+  font-family: "Roboto Slab", serif;
+  margin: 0;
+  margin-bottom: 3rem;
+}
+
 a {
   text-decoration: none;
   color: #ffffff;
@@ -368,6 +378,7 @@ a {
   -o-transition: background-color 0.5s;
   transition: background-color 0.5s;
   letter-spacing: 0.11em;
+  font-weight: 400;
   border: 2px solid #ffffff;
 }
 .btn:hover, .btn:focus {
@@ -378,9 +389,9 @@ a {
 }
 .btn--primary {
   height: 60px;
-  font-size: 1.125rem;
   border: 2px solid #2d3651;
   background-color: rgba(45, 54, 81, 0.8);
+  font-size: 1.125rem;
 }
 
 .header {
@@ -425,9 +436,9 @@ a {
 }
 
 .header-logo {
+  padding: 20px 20px 20px 0;
   letter-spacing: 0.22em;
   font-size: 1.5rem;
-  padding: 20px 20px 20px 0;
 }
 .header-logo__accent {
   display: inline-block;
@@ -442,17 +453,17 @@ a {
           flex-grow: 1;
 }
 .header-navbar__btn {
+  position: relative;
   width: 30px;
   height: 23 px;
-  position: relative;
   margin: 1px 0 25px auto;
-  -webkit-transform: rotate(0deg);
-      -ms-transform: rotate(0deg);
-          transform: rotate(0deg);
+  cursor: pointer;
   -webkit-transition: 0.5s ease-in-out;
   -o-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
-  cursor: pointer;
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
 }
 .header-navbar__btn--active span:nth-child(1) {
   top: 9px;
@@ -461,8 +472,8 @@ a {
           transform: rotate(135deg);
 }
 .header-navbar__btn--active span:nth-child(2) {
-  opacity: 0;
   left: -30px;
+  opacity: 0;
 }
 .header-navbar__btn--active span:nth-child(3) {
   top: 9px;
@@ -471,23 +482,23 @@ a {
           transform: rotate(-135deg);
 }
 .header-navbar__btn-row {
-  display: block;
   position: absolute;
-  height: 3px;
-  width: 100%;
-  background: #ffffff;
-  border-radius: 3px;
-  opacity: 1;
   left: 0;
-  -webkit-transform: rotate(0deg);
-      -ms-transform: rotate(0deg);
-          transform: rotate(0deg);
+  display: block;
+  width: 100%;
+  height: 3px;
   -webkit-transition: 0.25s ease-in-out;
   -o-transition: 0.25s ease-in-out;
   transition: 0.25s ease-in-out;
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
+  opacity: 1;
+  border-radius: 3px;
+  background: #ffffff;
 }
 .header-navbar__btn-row:nth-child(1) {
-  top: 0px;
+  top: 0;
 }
 .header-navbar__btn-row:nth-child(2) {
   top: 9px;
@@ -550,6 +561,7 @@ a {
   position: relative;
   z-index: 1;
   margin: 0;
+  letter-spacing: 2px;
   position: absolute;
   top: 0;
   right: 0;
@@ -645,6 +657,88 @@ a {
   grid-area: a9;
 }
 
+.about {
+  letter-spacing: 0.055em;
+  padding: 100px 0;
+  background-color: #e5e5e5;
+}
+.about__container {
+  display: grid;
+  grid-template-columns: 1fr 271px;
+  gap: 100px;
+  max-width: 1340px;
+  margin: auto;
+  padding: 0 20px;
+}
+.about__content p {
+  font-size: 1.125rem;
+  color: #637588;
+}
+.about__content p:first-of-type {
+  position: relative;
+  margin-top: -5px;
+}
+.about__content p:first-of-type::after {
+  position: absolute;
+  top: 0;
+  right: -50px;
+  content: "";
+  width: 1px;
+  height: 200px;
+  background-color: #44596e;
+}
+.about__content__image {
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.about__content__image img {
+  max-width: 100%;
+  max-height: 480px;
+}
+
+.form {
+  background-color: #2d3651;
+  padding: 30px 0;
+}
+
+.form__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: auto;
+  max-width: 1340px;
+  padding: 0 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  gap: 20px;
+}
+
+.form-item__input {
+  display: block;
+  width: 100%;
+  height: 60px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border: 2px solid rgba(255, 255, 255, 0);
+  border-bottom-color: rgba(255, 255, 255, 0.25);
+  background-color: rgba(255, 255, 255, 0.05);
+  font-size: 1.125rem;
+  letter-spacing: 0.15em;
+  color: #e5e5e5;
+}
+
+.form .btn--primary {
+  width: 100%;
+  border: 2px solid rgba(255, 255, 255, 0);
+  border-bottom-color: rgba(255, 255, 255, 0.25);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
 @media (min-width: 576px) {
   .btn--primary {
     min-width: 350px;
@@ -694,8 +788,8 @@ a {
     font-size: 3.75rem;
   }
   .btn--light {
-    height: 60px;
     min-width: 250px;
+    height: 60px;
     font-size: 1.125rem;
   }
   .header-content__title {
@@ -712,8 +806,8 @@ a {
     font-size: 2.5rem;
   }
   .btn--light {
-    height: 50px;
     min-width: 200px;
+    height: 50px;
   }
   .header-content__title {
     margin: 0 0 43px;
@@ -729,8 +823,8 @@ a {
     font-size: 1.875rem;
   }
   .btn--light {
-    height: 40px;
     min-width: 170px;
+    height: 40px;
   }
   .header-menu {
     background-color: rgba(68, 89, 110, 0.25);
@@ -738,17 +832,17 @@ a {
             box-shadow: -3px 3px 20px -10px black;
   }
   .header-navbar__list {
+    position: absolute;
+    top: 100%;
+    right: 20px;
     display: none;
+    text-align: right;
+    background-color: rgba(68, 89, 110, 0.75);
     margin: 0;
     padding: 0;
     list-style: none;
-    background-color: rgba(68, 89, 110, 0.75);
     -webkit-box-shadow: -3px 3px 20px -10px black;
             box-shadow: -3px 3px 20px -10px black;
-    position: absolute;
-    right: 20px;
-    top: 100%;
-    text-align: right;
   }
   .header-navbar__link {
     padding: 10px 20px;
@@ -779,13 +873,13 @@ a {
     width: 100%;
   }
   .header-content__actions {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
   .skills {
     padding: 20px;
