@@ -35,12 +35,23 @@
   background-color: rgba($color-light, 0.05);
 
   font-size: 1.125rem;
+  transition: background-color 0.5s;
+  &:hover,
+  &:focus {
+    background-color: rgba($color-light, 0.15);
+    border-bottom-color: rgba($color-light, 0.5);
+  }
 }
+
 .form .btn--primary {
   width: 100%;
-
   color: $color-light;
-  border: 2px solid rgba($color-light, 0);
+  border-color: rgba($color-light, 0);
   border-bottom-color: rgba($color-light, 0.25);
   background-color: rgba($color-light, 0.1);
+  &:hover,
+  &:focus {
+    border-color: $color-light;
+    background-color: $color-accent;
+  }
 }
