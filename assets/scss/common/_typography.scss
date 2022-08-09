@@ -36,6 +36,7 @@ h1 {
   }
 }
 h2 {
+<<<<<<< HEAD
   margin: 0;
   margin-bottom: 3rem;
 
@@ -46,6 +47,15 @@ h2 {
   font-family: $font-header;
   font-size: 2.5rem;
   line-height: 1.2em;
+=======
+  font-size: 2.5rem;
+  letter-spacing: 0.1em;
+  line-height: 1.2em;
+  color: $color-primary;
+  font-family: $font-header;
+  margin: 0;
+  margin-bottom: 3rem;
+>>>>>>> 718d8518e291f0474f2a6f37169fc4843ecd988f
 }
 a {
   text-decoration: none;
