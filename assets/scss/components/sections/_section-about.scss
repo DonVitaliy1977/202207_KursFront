@@ -2,7 +2,6 @@
 @use "../../mixins" as *;
 
 .about {
-<<<<<<< HEAD
   padding: 100px 0;
 
   letter-spacing: 0.055em;
@@ -10,20 +9,10 @@
   background-color: $color-gray-light;
   &__container {
     display: grid;
-=======
-  letter-spacing: 0.055em;
-  padding: 100px 0;
-  background-color: $color-gray-light;
-  &__container {
-    display: grid;
-    grid-template-columns: 1fr 271px;
-    gap: $gap-x5;
->>>>>>> 718d8518e291f0474f2a6f37169fc4843ecd988f
 
     max-width: $ul;
     margin: auto;
     padding: 0 20px;
-<<<<<<< HEAD
 
     gap: $gap-x5;
     grid-template-columns: 1fr 271px;
@@ -37,33 +26,17 @@
       &:first-of-type {
         position: relative;
 
-=======
-  }
-  &__content {
-    & p {
-      font-size: 1.125rem;
-      color: $color-gray;
-
-      &:first-of-type {
-        position: relative;
->>>>>>> 718d8518e291f0474f2a6f37169fc4843ecd988f
         margin-top: -5px;
         &::after {
           position: absolute;
           top: 0;
           right: -50px;
-<<<<<<< HEAD
 
           width: 1px;
           height: 200px;
 
           content: "";
 
-=======
-          content: "";
-          width: 1px;
-          height: 200px;
->>>>>>> 718d8518e291f0474f2a6f37169fc4843ecd988f
           background-color: $color-gray-dark;
         }
       }
