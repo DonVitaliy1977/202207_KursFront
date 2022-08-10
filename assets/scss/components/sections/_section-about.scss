@@ -7,6 +7,15 @@
   letter-spacing: 0.055em;
 
   background-color: $color-gray-light;
+  &__image {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    & img {
+      width: 100%;
+      height: 480px;
+    }
+  }
   &__container {
     display: grid;
 
@@ -14,14 +23,53 @@
     margin: auto;
     padding: 0 20px;
 
-    gap: $gap-x5;
-    grid-template-columns: 1fr 271px;
+    @include xl-min {
+      gap: $gap-x5;
+      grid-template-columns: 1fr 270px;
+    }
+    @include xl-lg {
+      gap: $gap-x3;
+      grid-template-columns: 1fr 270px;
+    }
+    @include lg-md {
+      gap: $gap-x4;
+      grid-template-columns: 1fr 270px;
+    }
+    @include md {
+      gap: $gap;
+      grid-template-columns: 1fr;
+    }
   }
   &__content {
+    & h2 {
+      @include xl-min {
+        letter-spacing: 0.25rem;
+
+        font-size: 2.5rem;
+        line-height: 3rem;
+      }
+      @include xl-lg {
+        letter-spacing: 0.1875rem;
+
+        font-size: 2rem;
+        line-height: 2.5rem;
+      }
+      @include lg {
+        letter-spacing: 0.125rem;
+
+        font-size: 1.5rem;
+        line-height: 2rem;
+      }
+    }
     & p {
       color: $color-gray;
 
-      font-size: 1.125rem;
+      @include lg-min {
+        font-size: 1.125rem;
+      }
+      @include lg {
+        font-size: 1rem;
+      }
 
       &:first-of-type {
         position: relative;
@@ -30,24 +78,22 @@
         &::after {
           position: absolute;
           top: 0;
-          right: -50px;
 
           width: 1px;
           height: 200px;
 
-          content: "";
-
           background-color: $color-gray-dark;
+
+          @include xl-min {
+            right: -50px;
+          }
+          @include xl-sm {
+            right: -25px;
+          }
+          @include sm-min {
+            content: "";
+          }
         }
-      }
-    }
-    &__image {
-      display: grid;
-      align-items: center;
-      justify-content: center;
-      & img {
-        max-width: 100%;
-        max-height: 480px;
       }
     }
   }

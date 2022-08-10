@@ -8,10 +8,10 @@
 
   transition: background-color 0.5s;
   letter-spacing: 0.11em;
-  font-weight: 400;
 
   border: 2px solid $color-light;
 
+  font-weight: 400;
   font-weight: 400;
 
   &:hover,
@@ -22,17 +22,17 @@
     background-color: rgba($color-light, 0.1);
 
     @include lg-min {
-      min-width: 250px;
+      width: 250px;
       height: 60px;
 
       font-size: 1.125rem;
     }
     @include lg-md {
-      min-width: 200px;
+      width: 200px;
       height: 50px;
     }
     @include md {
-      min-width: 170px;
+      width: 170px;
       height: 40px;
     }
   }
@@ -45,7 +45,7 @@
     font-size: 1.125rem;
 
     @include sm-min {
-      min-width: 350px;
+      width: 350px;
     }
     @include sm {
       width: 100%;
