@@ -6,9 +6,7 @@
     margin-top: 0;
   }
   &__container {
-    max-width: $ul;
-    margin: auto;
-    padding: 0 20px;
+    @extend %container;
   }
   &-item {
     background-color: $color-gray-light-small;
@@ -17,9 +15,12 @@
       display: grid;
       align-content: center;
 
-      padding: 0 20px;
+      padding: 20px;
 
       color: $color-gray;
+      & h3 {
+        font-family: $font-header;
+      }
       & p {
         text-align: center;
       }

@@ -19,10 +19,7 @@
   &__container {
     display: grid;
 
-    max-width: $ul;
-    margin: auto;
-    padding: 0 20px;
-
+    @extend %container;
     @include xl-min {
       gap: $gap-x5;
       grid-template-columns: 1fr 270px;
@@ -70,7 +67,9 @@
       @include lg {
         font-size: 1rem;
       }
-
+      &:last-of-type {
+        margin-bottom: 0;
+      }
       &:first-of-type {
         position: relative;
 
@@ -82,10 +81,10 @@
           width: 1px;
           height: 200px;
 
-          background-color: $color-gray-dark;
+          background-color: rgba($color-gray-dark, 0.15);
 
           @include xl-min {
-            right: -50px;
+            right: -48px;
           }
           @include xl-sm {
             right: -25px;
