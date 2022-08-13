@@ -2,11 +2,19 @@
 @use "../../mixins" as *;
 
 .about {
-  padding: 100px 0;
-
   letter-spacing: 0.055em;
 
   background-color: $color-gray-light;
+
+  @include lg-min {
+    padding: 100px 0;
+  }
+  @include lg-md {
+    padding: 80px 0;
+  }
+  @include md {
+    padding: 60px 0;
+  }
   &__image {
     display: grid;
     align-items: center;
@@ -29,7 +37,7 @@
       grid-template-columns: 1fr 270px;
     }
     @include lg-md {
-      gap: $gap-x4;
+      gap: $gap-x2;
       grid-template-columns: 1fr 270px;
     }
     @include md {
@@ -39,41 +47,55 @@
   }
   &__content {
     & h2 {
-      @include xl-min {
+      margin-top: 0;
+
+      @include lg-min {
         letter-spacing: 0.25rem;
 
         font-size: 2.5rem;
         line-height: 3rem;
       }
-      @include xl-lg {
-        letter-spacing: 0.1875rem;
+      @include lg-md {
+        letter-spacing: 3.2px;
 
         font-size: 2rem;
-        line-height: 2.5rem;
+        line-height: 37px;
       }
-      @include lg {
-        letter-spacing: 0.125rem;
+      @include md {
+        text-align: center;
+        letter-spacing: 2.4px;
 
         font-size: 1.5rem;
-        line-height: 2rem;
+        line-height: 29px;
       }
     }
     & p {
       color: $color-gray;
 
+      font-family: $font-main;
+
       @include lg-min {
         font-size: 1.125rem;
       }
-      @include lg {
+      @include lg-md {
+        margin: 14px auto;
+
+        letter-spacing: 0.9px;
+
+        font-size: 1rem;
+        line-height: 19px;
+      }
+      @include md {
         font-size: 1rem;
       }
+
       &:last-of-type {
         margin-bottom: 0;
       }
       &:first-of-type {
         position: relative;
 
-        margin-top: -5px;
+        margin-top: -10px;
         &::after {
           position: absolute;
           top: 0;
@@ -87,7 +109,7 @@
             right: -48px;
           }
           @include xl-sm {
-            right: -25px;
+            right: -18px;
           }
           @include sm-min {
             content: "";
