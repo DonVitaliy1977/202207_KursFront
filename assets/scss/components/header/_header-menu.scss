@@ -8,7 +8,7 @@
   right: 0;
   left: 0;
 
-  @include md {
+  @include md-min {
     background-color: rgba($color-gray-dark, 0.25);
 
     @include box-shadow;

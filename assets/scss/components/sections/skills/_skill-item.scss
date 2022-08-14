@@ -15,10 +15,10 @@
 
     letter-spacing: 2px;
 
-    @include md-min {
+    @include max-md {
       font-size: 1.25rem;
     }
-    @include md {
+    @include md-min {
       font-size: 1.125rem;
     }
     @include abs-position;

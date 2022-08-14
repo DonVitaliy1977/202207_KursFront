@@ -21,7 +21,7 @@
   &--light {
     background-color: rgba($color-light, 0.1);
 
-    @include lg-min {
+    @include max-lg {
       width: 250px;
       height: 60px;
 
@@ -31,7 +31,7 @@
       width: 200px;
       height: 50px;
     }
-    @include md {
+    @include md-min {
       width: 170px;
       height: 40px;
     }
@@ -44,10 +44,10 @@
 
     font-size: 1.125rem;
 
-    @include sm-min {
+    @include max-sm {
       width: 350px;
     }
-    @include sm {
+    @include sm-min {
       width: 100%;
     }
   }

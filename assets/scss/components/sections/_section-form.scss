@@ -10,13 +10,13 @@
 
     @extend %container;
     gap: $gap;
-    @include md-min {
+    @include max-md {
       grid-template-columns: repeat(3, 1fr);
     }
     @include md-sm {
       grid-template-columns: repeat(2, 1fr);
     }
-    @include sm {
+    @include sm-min {
       grid-template-columns: 1fr;
     }
   }
@@ -42,13 +42,13 @@
       border-bottom-color: rgba($color-light, 0.25);
       background-color: rgba($color-light, 0.05);
 
-      @include xl-min {
+      @include max-xl {
         font-size: 1.125rem;
       }
       @include xl-md {
         font-size: 1rem;
       }
-      @include md {
+      @include md-min {
         font-size: 1.125rem;
       }
 

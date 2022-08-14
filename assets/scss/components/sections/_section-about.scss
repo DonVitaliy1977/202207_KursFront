@@ -6,13 +6,13 @@
 
   background-color: $color-gray-light;
 
-  @include lg-min {
+  @include max-lg {
     padding: 100px 0;
   }
   @include lg-md {
     padding: 80px 0;
   }
-  @include md {
+  @include md-min {
     padding: 60px 0;
   }
   &__image {
@@ -28,20 +28,19 @@
     display: grid;
 
     @extend %container;
-    @include xl-min {
+    @include max-lg {
       gap: $gap-x5;
-      grid-template-columns: 1fr 270px;
-    }
-    @include xl-lg {
-      gap: $gap-x3;
-      grid-template-columns: 1fr 270px;
     }
     @include lg-md {
+      gap: $gap-x3;
+    }
+    @include md-min {
       gap: $gap-x2;
+    }
+    @include max-sm {
       grid-template-columns: 1fr 270px;
     }
-    @include md {
-      gap: $gap;
+    @include sm-min {
       grid-template-columns: 1fr;
     }
   }
@@ -49,7 +48,7 @@
     & h2 {
       margin-top: 0;
 
-      @include lg-min {
+      @include max-lg {
         letter-spacing: 0.25rem;
 
         font-size: 2.5rem;
@@ -61,7 +60,7 @@
         font-size: 2rem;
         line-height: 37px;
       }
-      @include md {
+      @include md-min {
         text-align: center;
         letter-spacing: 2.4px;
 
@@ -74,7 +73,7 @@
 
       font-family: $font-main;
 
-      @include lg-min {
+      @include max-lg {
         font-size: 1.125rem;
       }
       @include lg-md {
@@ -85,7 +84,7 @@
         font-size: 1rem;
         line-height: 19px;
       }
-      @include md {
+      @include md-min {
         font-size: 1rem;
       }
 
@@ -105,13 +104,13 @@
 
           background-color: rgba($color-gray-dark, 0.15);
 
-          @include xl-min {
+          @include max-xl {
             right: -48px;
           }
           @include xl-sm {
             right: -18px;
           }
-          @include sm-min {
+          @include max-sm {
             content: "";
           }
         }

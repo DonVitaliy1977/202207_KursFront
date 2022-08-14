@@ -25,13 +25,13 @@ h1 {
   font-weight: 300;
   line-height: 1.2em;
 
-  @include lg-min {
+  @include max-lg {
     font-size: 3.75rem;
   }
   @include lg-md {
     font-size: 2.5rem;
   }
-  @include md {
+  @include md-min {
     font-size: 1.875rem;
   }
 }
@@ -42,7 +42,7 @@ h2 {
 
   font-family: $font-header;
 
-  @include lg-min {
+  @include max-lg {
     margin-bottom: 3rem;
 
     letter-spacing: 4px;
@@ -66,7 +66,7 @@ h2 {
     font-size: 1.5rem;
     line-height: 24px;
   }
-  @include sm {
+  @include sm-min {
     margin-bottom: 38px;
 
     text-align: center;

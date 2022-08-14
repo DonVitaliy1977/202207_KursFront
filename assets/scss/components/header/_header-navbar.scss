@@ -14,7 +14,7 @@
     transition: 0.5s ease-in-out;
     transform: rotate(0deg);
 
-    @include md-min {
+    @include max-md {
       display: none;
     }
     &--active span {
@@ -62,14 +62,14 @@
     }
   }
   &__list {
-    @include md-min {
+    @include max-md {
       display: grid;
       justify-content: end;
 
       grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
       @include unlist(0 -20px 0 0);
     }
-    @include md {
+    @include md-min {
       position: absolute;
       top: 100%;
       right: 20px;
@@ -95,10 +95,10 @@
 
     font-size: 18px;
 
-    @include md-min {
+    @include max-md {
       padding: $gap $gap-sm;
     }
-    @include md {
+    @include md-min {
       padding: $gap-sm $gap;
     }
     &:hover,
